@@ -13,6 +13,10 @@ public class PlayerMoveKeyboard : MonoBehaviour
     Vector3 screenMovementFoward;
     Vector3 screenMovementRight;
 
+    string AXIS_X = "Horizontal";
+    string AXIS_Y = "Vertical";
+    string Animation_Run = "Run";
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -29,6 +33,19 @@ public class PlayerMoveKeyboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        motor.movementDirection = Input.GetAxis("Horizontal") * screenMovementRight + Input.GetAxis("Vertical") * screenMovementFoward;
+        motor.movementDirection = Input.GetAxis(AXIS_X) * screenMovementRight + Input.GetAxis(AXIS_Y) * screenMovementFoward;
+        if(Input.GetAxis(AXIS_X) !=0 || Input.GetAxis(AXIS_Y) != 0)
+        {
+            anim.SetBool(Animation_Run, true);
+        }
+        else
+        {
+            anim.SetBool(Animation_Run, false);
+        }
+
+        if (motor.movementDirection.sqrMagnitude > 1)
+        {
+            motor.movementDirection.Normalize();
+        }
     }
 }
