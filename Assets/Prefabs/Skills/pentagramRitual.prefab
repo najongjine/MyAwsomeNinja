@@ -4833,6 +4833,9 @@ GameObject:
   m_Component:
   - component: {fileID: 400002}
   - component: {fileID: 82664452573991536}
+  - component: {fileID: 608337054}
+  - component: {fileID: 608337058}
+  - component: {fileID: 608337057}
   m_Layer: 0
   m_Name: pentagramRitual
   m_TagString: ground
@@ -4952,6 +4955,43 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &608337054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a06b91ecb488454aa65e35297f06347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 3
+--- !u!114 &608337058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24272a3301e2c11429288772a58f1fc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &608337057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d74ac69b9182b43a22b55dde56ed64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -19276,6 +19316,7 @@ GameObject:
   - component: {fileID: 400010}
   - component: {fileID: 19800008}
   - component: {fileID: 19900008}
+  - component: {fileID: 608337056}
   m_Layer: 0
   m_Name: redBurningSmoke
   m_TagString: Untagged
@@ -24039,3 +24080,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &608337056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d979ac2c012d10d459737846cb2e0d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 360
