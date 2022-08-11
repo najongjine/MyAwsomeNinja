@@ -38,6 +38,7 @@ public class EnemyAI : MonoBehaviour
         playerHealth=player.GetComponent<PlayerHealth>();
         navAgent = GetComponent<NavMeshAgent>();
         navigationIndex=Random.Range(0,navPoints.Length);
+        // move gameobject automacally
         navAgent.SetDestination(navPoints[navigationIndex].position);
     }
 
@@ -109,6 +110,7 @@ public class EnemyAI : MonoBehaviour
             {
                 navigationIndex++;
             }
+            // move gameobject automacally
             navAgent.SetDestination(navPoints[navigationIndex].position);
         }
         else

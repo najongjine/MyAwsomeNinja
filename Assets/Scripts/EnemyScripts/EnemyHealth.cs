@@ -55,7 +55,7 @@ public class EnemyHealth : MonoBehaviour
         anim.SetBool(Animation_Dead, true);
         anim.SetBool(Animation_Be_Attacked, false);
         enemyDead = true;
-        StartCoroutine(deadEffect());
+        StartCoroutine(DeadEffect());
         attackPointOne.SetActive(false);
         attackPointTwo.SetActive(false);
         audioSource.PlayOneShot(enemyDeadSound);
