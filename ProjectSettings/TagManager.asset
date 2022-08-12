@@ -10,6 +10,7 @@ TagManager:
   - ground
   - breath
   - Enemy
+  - Boss
   layers:
   - Default
   - TransparentFX
