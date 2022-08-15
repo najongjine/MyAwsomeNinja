@@ -33334,6 +33334,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24272a3301e2c11429288772a58f1fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zombieLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  radius: 0.2
+  damageCount: 100
+  damageEffect: {fileID: 100008, guid: 5cd612e83713bde4da6e0a059cac6984, type: 3}
 --- !u!114 &4385367596208932366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33346,3 +33352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d74ac69b9182b43a22b55dde56ed64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  radius: 0.2
+  damageEffect: {fileID: 100008, guid: 5cd612e83713bde4da6e0a059cac6984, type: 3}
+  damageCount: 30

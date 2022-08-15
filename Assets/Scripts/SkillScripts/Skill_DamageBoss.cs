@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class Skill_DamageBoss : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public LayerMask bossLayer;
+	public float radius;
+	public GameObject damageEffect;
+	public float damageCount;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private bool collided;
+	private BossHealth bossHealth;
+
+	void Update()
+	{
+		Collider[] hits = Physics.OverlapSphere(transform.position, radius, bossLayer);
+		foreach (Collider c in hits)
+		{
+			if (c.isTrigger)
+			{
+				continue;
+			}
+			collided = true;
+			bossHealth = c.gameObject.GetComponent<BossHealth>();
+
+			if (collided)
+			{
+				Instantiate(damageEffect, transform.position, transform.rotation);
+				bossHealth.BossTakeDamage(damageCount);
+				Destroy(gameObject);
+			}
+		}
+	}
+
 }

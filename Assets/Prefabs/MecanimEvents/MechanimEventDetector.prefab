@@ -234,6 +234,32 @@ MonoBehaviour:
         conditions: []
       critical: 0
       isEnable: 1
+  - animatorController: {fileID: 9100000, guid: 8db498fa3564d0c49914eaba533aef2f, type: 2}
+    layer: 0
+    stateNameHash: -1993454120
+    events:
+    - functionName: FootStepOne
+      normalizedTime: 0.24
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+    - functionName: FootStepTwo
+      normalizedTime: 0.7
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
   - animatorController: {fileID: 9100000, guid: 9979e87ed0868b3489bd98a74e9ff480, type: 2}
     layer: 0
     stateNameHash: -44861523
@@ -295,6 +321,62 @@ MonoBehaviour:
       isEnable: 1
     - functionName: EnemyAttackTwoEnd
       normalizedTime: 0.65
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+  - animatorController: {fileID: 9100000, guid: 26b6662d25a427d4e90237d7487f35ab, type: 2}
+    layer: 0
+    stateNameHash: 927472241
+    events:
+    - functionName: Skill1
+      normalizedTime: 0.3
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+  - animatorController: {fileID: 9100000, guid: 26b6662d25a427d4e90237d7487f35ab, type: 2}
+    layer: 0
+    stateNameHash: -1687978976
+    events:
+    - functionName: Skill3
+      normalizedTime: 0.18
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+  - animatorController: {fileID: 9100000, guid: 26b6662d25a427d4e90237d7487f35ab, type: 2}
+    layer: 0
+    stateNameHash: 550390824
+    events:
+    - functionName: SwordSlashAttack
+      normalizedTime: 0.36
+      paramType: 4
+      intParam: 0
+      floatParam: 0
+      stringParam: 
+      boolParam: 1
+      condition:
+        conditions: []
+      critical: 0
+      isEnable: 1
+    - functionName: SwordSlashAttackEnd
+      normalizedTime: 0.64
       paramType: 4
       intParam: 0
       floatParam: 0

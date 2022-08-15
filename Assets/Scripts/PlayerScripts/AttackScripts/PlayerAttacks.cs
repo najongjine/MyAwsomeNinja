@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerAttacks : MonoBehaviour
 {
@@ -54,10 +55,22 @@ public class PlayerAttacks : MonoBehaviour
     string Animation_Skill_2 = "Skill2";
     string Animation_Skill_3 = "Skill3";
 
+    private Button skillOne_Btn;
+    private Button skillTwo_Btn;
+    private Button skillThree_Btn;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+
+        skillOne_Btn = GameObject.Find("Skill One Button").GetComponent<Button>();
+        skillTwo_Btn = GameObject.Find("Skill Two Button").GetComponent<Button>();
+        skillThree_Btn = GameObject.Find("Skill Three Button").GetComponent<Button>();
+
+        skillOne_Btn.onClick.AddListener(() => SkillOneButtonPressed());
+        skillTwo_Btn.onClick.AddListener(() => SkillTwoButtonPressed());
+        skillThree_Btn.onClick.AddListener(() => SkillThreeButtonPressed());
 
         s1_NotUsed = true;
         s2_NotUsed = true;
@@ -74,6 +87,36 @@ public class PlayerAttacks : MonoBehaviour
     {
         HandleButtonPresses();
     }
+
+    // LISTENRES FOR BUTTONS BEGIN
+
+    public void AttackButtonPressed()
+    {
+        anim.SetBool(Animation_Attack, true);
+    }
+
+    public void AttackButtonReleased()
+    {
+        anim.SetBool(Animation_Attack, false);
+    }
+
+    public void SkillOneButtonPressed()
+    {
+        anim.SetBool(Animation_Skill_1, true);
+    }
+
+    public void SkillTwoButtonPressed()
+    {
+        anim.SetBool(Animation_Skill_2, true);
+    }
+
+    public void SkillThreeButtonPressed()
+    {
+        anim.SetBool(Animation_Skill_3, true);
+    }
+
+    // LISTENERS FOR BUTTONS END
+
     void HandleButtonPresses()
     {
         if (Input.GetKeyDown(KeyCode.I))

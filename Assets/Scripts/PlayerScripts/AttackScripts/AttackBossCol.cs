@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class AttackBossCol : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public LayerMask bossLayer;
+	public float radius;
+	public GameObject attackEffect;
+	public Transform hitPoint;
+	public float damageCount;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private bool collided;
+	private BossHealth bossHealth;
+
+	void Update()
+	{
+		Collider[] hits = Physics.OverlapSphere(transform.position, radius, bossLayer);
+		foreach (Collider c in hits)
+		{
+			if (c.isTrigger)
+			{
+				continue;
+			}
+			collided = true;
+			bossHealth = c.gameObject.GetComponent<BossHealth>();
+			if (collided)
+			{
+				Instantiate(attackEffect, hitPoint.position, hitPoint.rotation);
+				bossHealth.BossTakeDamage(damageCount);
+			}
+		}
+	}
 }
